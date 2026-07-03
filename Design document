@@ -1,0 +1,172 @@
+# Design Document
+
+## Project Title
+
+**Vidhi AI – Simplifying Indian Law with Artificial Intelligence**
+
+---
+
+## Student Information
+
+**Name:** Likith Raj
+
+**Segment:** Segment 3 – Foundations of Applied Machine Learning
+
+**Problem Statement:** I2 – Document Q&A (Retrieval-Augmented Generation)
+
+---
+
+# Problem Statement
+
+Indian laws, constitutional provisions, and legal documents are written using technical legal language that is difficult for most citizens to understand. Many people struggle to interpret legal notices, understand their rights, or find accurate legal information without consulting a legal professional.
+
+Vidhi AI aims to bridge this gap by providing an AI-powered legal knowledge assistant that answers questions using official Indian legal documents. Instead of generating unsupported responses, the system retrieves relevant legal text and produces simplified explanations with proper citations.
+
+---
+
+# Objective
+
+The objective of Vidhi AI is to build a Retrieval-Augmented Generation (RAG) application that enables users to:
+
+* Ask questions about Indian laws in plain language.
+* Understand legal concepts through simplified explanations.
+* Upload legal documents and ask questions about their contents.
+* Receive answers supported by citations from official legal sources.
+* Improve legal awareness while encouraging users to consult qualified legal professionals for legal advice.
+
+---
+
+# Target Users
+
+* Students
+* General Public
+* Small Business Owners
+* Startup Founders
+* Legal Interns
+* Researchers
+
+---
+
+# Scope of the Project
+
+### Included
+
+* Question answering from legal documents.
+* Constitution article explanations.
+* Legal document simplification.
+* Citation-based responses.
+* PDF upload and document chat.
+* Guardrails for unsupported questions.
+
+### Not Included
+
+* Giving legal advice.
+* Predicting court outcomes.
+* Drafting legal documents.
+* Replacing lawyers.
+* Live legal consultation.
+
+---
+
+# Proposed Solution
+
+Vidhi AI will use Retrieval-Augmented Generation (RAG). When a user asks a question, the system retrieves the most relevant sections from trusted legal documents stored in a vector database. These retrieved sections are then provided to a Large Language Model, which generates an easy-to-understand answer while referencing the original source.
+
+This approach reduces hallucinations and ensures that responses remain grounded in official legal documents.
+
+---
+
+# System Workflow
+
+Legal Documents (PDFs)
+
+↓
+
+PDF Parsing
+
+↓
+
+Text Chunking
+
+↓
+
+Embedding Generation
+
+↓
+
+Vector Database (ChromaDB)
+
+↓
+
+User Question
+
+↓
+
+Semantic Retrieval
+
+↓
+
+Large Language Model
+
+↓
+
+Answer with Citation
+
+---
+
+# Technology Stack
+
+| Component            | Technology                    |
+| -------------------- | ----------------------------- |
+| Programming Language | Python                        |
+| Frontend             | Streamlit                     |
+| Backend              | FastAPI                       |
+| RAG Framework        | LangChain                     |
+| Vector Database      | ChromaDB                      |
+| Embedding Model      | BAAI BGE Small                |
+| PDF Parser           | PyMuPDF                       |
+| Large Language Model | Ollama (Qwen/Llama) or OpenAI |
+| Version Control      | Git & GitHub                  |
+
+---
+
+# Data Sources
+
+The initial knowledge base will include publicly available Indian legal documents:
+
+* Constitution of India
+* Bharatiya Nyaya Sanhita (BNS)
+* Bharatiya Nagarik Suraksha Sanhita (BNSS)
+* Bharatiya Sakshya Adhiniyam (BSA)
+
+Additional legal documents and judgments may be incorporated in future versions.
+
+---
+
+# Expected Deliverables
+
+* AI-powered legal question-answering system.
+* Interactive Streamlit web application.
+* Citation-based responses.
+* Evaluation using a curated set of legal questions.
+* Public GitHub repository.
+* Deployment on a free cloud platform.
+* Documentation and project report.
+
+---
+
+# Future Enhancements
+
+* Multilingual support (English, Hindi, Telugu)
+* Voice-based legal assistant
+* OCR support for scanned legal documents
+* AI-generated case summaries
+* Comparison of two legal documents
+* Similar judgment retrieval
+* Mobile-friendly interface
+
+---
+
+# Disclaimer
+
+Vidhi AI is intended solely for educational and informational purposes. It explains legal concepts based on official legal documents and is not a substitute for advice from a qualified legal professional.
